@@ -11,10 +11,10 @@ spec:
   template:
     metadata:
       labels:
-        app: FinanceMe
+        app: Financeme
     spec:
       containers:
-        - name: financeMe
+        - name: financeme
           image: aakaash03/financeme-august:latest
           ports:
             - containerPort: 8081
