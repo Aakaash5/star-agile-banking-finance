@@ -2,12 +2,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: financeMe
+  name: financeme
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: FinanceMe
+      app: Financeme
   template:
     metadata:
       labels:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: financeMe
-          image: aakaash03/financeMe-august:latest
+          image: aakaash03/financeme-august:latest
           ports:
             - containerPort: 8081
           env:
@@ -25,11 +25,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: financeMe
+  name: financeme
 spec:
   type: NodePort
   ports:
     - port: 8081
       targetPort: 8081
   selector:
-    app: financeMe
+    app: financeme
