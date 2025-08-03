@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: financeme
-          image: aakaash03/financeme-08:latest
+          image: aakaash03/financeme-july:latest
           ports:
             - containerPort: 8081
           env:
